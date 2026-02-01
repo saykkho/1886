@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacte - Nàstic Store</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#94000c",
+            "background-light": "#f7f7f7",
+            "background-dark": "#121212",
+            "card-dark": "#1F1F1F",
+            "grana-accent": "#ce8d92"
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <!-- Navegación -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 md:px-20 py-4">
+      <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+
+          <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="introduccion.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Sobre Nosaltres</a>
+          <a href="coleccion.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Col·lecció</a>
+          <a href="historia.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">La Nostra
+            Història</a>
+          <a href="contacto.html"
+            class="text-sm font-bold uppercase tracking-widest text-primary border-b-2 border-primary">Contacte</a>
+        </nav>
+        <div class="flex items-center gap-6 flex-1 justify-end">
+          <div class="relative max-w-xs w-full hidden md:block">
+            <input
+              class="w-full bg-card-dark border-none rounded-lg py-2 pl-10 pr-4 text-xs font-bold focus:ring-1 focus:ring-primary placeholder-grana-accent/50"
+              placeholder="CERCAR PRODUCTES..." type="text" />
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-grana-accent text-sm">search</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+              <span class="material-symbols-outlined">person</span>
+            </button>
+            <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+              <span class="material-symbols-outlined">shopping_bag</span>
+              <span
+                class="absolute top-0 right-0 size-4 bg-primary text-[10px] flex items-center justify-center rounded-full font-bold">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- Sección de Contacto -->
+      <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto w-full">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-12 text-center">
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4">Contacta Amb Nosaltres</h1>
+            <p class="text-xl text-gray-300">Preguntes sobre els nostres productes? Estem aquí per ajudar-te.</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 mb-12">
+            <!-- Información de Contacto -->
+            <div class="space-y-8">
+              <div>
+                <h3 class="font-black text-lg uppercase tracking-wider mb-2">Adreça</h3>
+                <p class="text-gray-300">Botiga Online<br />Tarragona<br />Espanya (Sense seu física pública)</p>
+              </div>
+              <div>
+                <h3 class="font-black text-lg uppercase tracking-wider mb-2">Telèfon</h3>
+                <p class="text-gray-300">Contacte via email</p>
+              </div>
+              <div>
+                <h3 class="font-black text-lg uppercase tracking-wider mb-2">Correu Electrònic</h3>
+                <a href="mailto:info@1886store.com"
+                  class="text-primary hover:text-grana-accent transition-colors">info@1886store.com</a>
+              </div>
+              <div>
+                <h3 class="font-black text-lg uppercase tracking-wider mb-4">Horari d'Atenció</h3>
+                <p class="text-gray-300">Dilluns a Divendres: 9:00 - 18:00<br />Dissabtes: 10:00 - 14:00<br />Diumenges:
+                  Tancat</p>
+              </div>
+              <div>
+                <h3 class="font-black text-lg uppercase tracking-wider mb-4">Segueix-nos</h3>
+                <div class="flex gap-4">
+                  <a href="legal.html"
+                    class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary hover:border-primary transition-all">f</a>
+                  <a href="legal.html"
+                    class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary hover:border-primary transition-all">𝕏</a>
+                  <a href="legal.html"
+                    class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary hover:border-primary transition-all">📷</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="bg-card-dark rounded-2xl p-8 space-y-6">
+              <form id="contactForm" class="space-y-6">
+                <div>
+                  <label class="block text-sm font-bold uppercase tracking-wider mb-2">Nom</label>
+                  <input type="text" name="nombre" required
+                    class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    placeholder="El teu nom">
+                </div>
+                <div>
+                  <label class="block text-sm font-bold uppercase tracking-wider mb-2">Correu Electrònic</label>
+                  <input type="email" name="email" required
+                    class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    placeholder="el_teu@email.com">
+                </div>
+                <div>
+                  <label class="block text-sm font-bold uppercase tracking-wider mb-2">Assumpte</label>
+                  <input type="text" name="asunto" required
+                    class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                    placeholder="En què podem ajudar-te?">
+                </div>
+                <div>
+                  <label class="block text-sm font-bold uppercase tracking-wider mb-2">Missatge</label>
+                  <textarea name="mensaje" required rows="5"
+                    class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 text-white focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
+                    placeholder="Conta'ns més..."></textarea>
+                </div>
+                <button type="submit"
+                  class="w-full bg-primary hover:bg-primary/80 text-white font-black py-3 uppercase tracking-widest rounded-lg transition-colors">
+                  Enviar Missatge
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Mapa (placeholder) -->
+          <div class="bg-card-dark rounded-2xl p-8 mb-12">
+            <h3 class="font-black text-2xl uppercase tracking-tighter mb-4">Ubicació</h3>
+            <div
+              class="w-full h-96 bg-background-dark rounded-lg flex items-center justify-center border border-white/10">
+              <p class="text-gray-400">El mapa s'integrarà aquí</p>
+            </div>
+          </div>
+
+          <!-- Preguntas Frecuentes -->
+          <div class="space-y-6">
+            <h3 class="font-black text-2xl uppercase tracking-tighter mb-6">Preguntes Freqüents</h3>
+            <details class="bg-card-dark rounded-lg p-6 group cursor-pointer">
+              <summary class="font-bold text-lg uppercase tracking-wider flex justify-between items-center">
+                Quin és el temps d'entrega?
+                <span class="transform group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <p class="text-gray-300 mt-4">Els comandaments normalment s'entregan en 3-5 dies laborals a Espanya.</p>
+            </details>
+            <details class="bg-card-dark rounded-lg p-6 group cursor-pointer">
+              <summary class="font-bold text-lg uppercase tracking-wider flex justify-between items-center">
+                Quina és la teva política de devolucions?
+                <span class="transform group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <p class="text-gray-300 mt-4">Acceptem devolucions dins de 30 dies des de la compra en perfectes
+                condicions.</p>
+            </details>
+            <details class="bg-card-dark rounded-lg p-6 group cursor-pointer">
+              <summary class="font-bold text-lg uppercase tracking-wider flex justify-between items-center">
+                Mètodes de pagament acceptats?
+                <span class="transform group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <p class="text-gray-300 mt-4">Acceptem targeta de crèdit, dèbit, PayPal i transferència bancària.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 pt-20 pb-10 px-6 md:px-20 mt-20">
+      <div class="max-w-[1440px] mx-auto">
+        <div class="text-center space-y-4 mb-10">
+          <p class="text-gray-400 text-sm">© 2026 1886 STORE. NO OFICIAL. PRODUCTES INDEPENDENTS.</p>
+          <p class="text-[10px] text-gray-500 mt-1">No afiliat al Gimnàstic de Tarragona SAD.</p>
+          <div class="flex justify-center gap-6">
+            <a href="legal.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Política de
+              Privacitat</a>
+            <a href="legal.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Condicions de
+              Servei</a>
+            <a href="contacto.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Contacte</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Manejar envío del formulario de contacto con Formspree
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const btn = e.target.querySelector('button[type="submit"]');
+          const originalText = btn.textContent;
+
+          // Reemplaza 'TU_ID_DE_FORMSPREE' con tu ID real de Formspree
+          const FORMSPREE_ID = 'maqbybpw'; // Tu ID de Formspree
+          const url = `https://formspree.io/f/${FORMSPREE_ID}`;
+
+          const formData = new FormData(e.target);
+
+          try {
+            btn.textContent = 'Enviant...';
+            btn.disabled = true;
+
+            const response = await fetch(url, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (response.ok) {
+              // Éxito
+              btn.textContent = '✓ Missatge Enviat';
+              mostrarNotificacion('Gràcies! El teu missatge ha estat enviat correctament.');
+              e.target.reset();
+            } else {
+              // Error del servidor
+              throw new Error('Error en el servidor');
+            }
+          } catch (error) {
+            console.error('Error:', error);
+            mostrarNotificacion('S\'ha produït un error al enviar el missatge. Torna-ho a intentar.');
+            btn.textContent = 'Error al enviar';
+          } finally {
+            setTimeout(() => {
+              btn.textContent = originalText;
+              btn.disabled = false;
+            }, 3000);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

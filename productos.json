@@ -1,0 +1,72 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "BASELGA SHIRT",
+      "categoria": "samarretes",
+      "precio": 15.00,
+      "precioOriginal": 20.00,
+      "imagen": "images/baselga_front.jpg",
+      "imagenes": [
+        "images/baselga_front.jpg",
+        "images/baselga_back.jpg"
+      ],
+      "descripcion": "Samarreta no oficial estil Gimnàstic - Edició Fan Baselga",
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 50,
+      "nuevo": true
+    },
+    {
+      "id": 2,
+      "nombre": "Nou Estadi",
+      "categoria": "samarretes",
+      "precio": 15.00,
+      "precioOriginal": 20.00,
+      "imagen": "images/nou_estadi_front.jpg",
+      "imagenes": [
+        "images/nou_estadi_front.jpg",
+        "images/nou_estadi_back.jpg"
+      ],
+      "descripcion": "Samarreta edició especial Costa Daurada - Nou Estadi",
+      "tallas": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 35,
+      "nuevo": false
+    },
+    {
+      "id": 3,
+      "nombre": "Jaqueta Entrenament",
+      "categoria": "jaquetes",
+      "precio": 0,
+      "textoPrecio": "Pròximament...",
+      "imagen": "images/jaqueta_front.jpg",
+      "imagenes": [
+        "images/jaqueta_front.jpg",
+        "images/jaqueta_back.jpg"
+      ],
+      "descripcion": "Jaqueta tècnica d'entrenament",
+      "tallas": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 0,
+      "nuevo": true
+    }
+  ]
+}

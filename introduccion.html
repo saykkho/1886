@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Nàstic Store</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#94000c",
+            "background-light": "#f7f7f7",
+            "background-dark": "#121212",
+            "card-dark": "#1F1F1F",
+            "grana-accent": "#ce8d92"
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <!-- Navegación -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 md:px-20 py-4">
+      <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+
+          <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="introduccion.html"
+            class="text-sm font-bold uppercase tracking-widest text-primary border-b-2 border-primary">Sobre
+            Nosaltres</a>
+          <a href="coleccion.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Col·lecció</a>
+          <a href="historia.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">La Nostra
+            Història</a>
+          <a href="contacto.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Contacte</a>
+        </nav>
+        <div class="flex items-center gap-6 flex-1 justify-end">
+          <div class="relative max-w-xs w-full hidden md:block">
+            <input
+              class="w-full bg-card-dark border-none rounded-lg py-2 pl-12 pr-4 text-xs font-bold focus:ring-1 focus:ring-primary placeholder-grana-accent/50"
+              placeholder="CERCAR PRODUCTES..." type="text" />
+            <span
+              class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-grana-accent text-sm"></span>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+              <span class="material-symbols-outlined">person</span>
+            </button>
+            <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+              <span class="material-symbols-outlined">shopping_bag</span>
+              <span
+                class="absolute top-0 right-0 size-4 bg-primary text-[10px] flex items-center justify-center rounded-full font-bold">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="relative w-full h-[60vh] @container overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40"
+          style='background-image: linear-gradient(135deg, rgba(148, 0, 12, 0.8) 0%, rgba(148, 0, 12, 0.4) 100%);'>
+        </div>
+        <div class="relative h-full flex flex-col justify-center px-6 md:px-20 max-w-[1440px] mx-auto">
+          <div class="max-w-3xl space-y-4">
+            <h1 class="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter">
+              Sobre <br /> <span class="text-grana-accent">Nàstic</span>
+            </h1>
+            <p class="text-xl text-gray-200">Coneix la passió, la història i els valors que ens defineixen com a club.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Introducció -->
+      <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div class="space-y-6">
+            <h2 class="text-4xl font-black uppercase tracking-tighter">Qui Som?</h2>
+            <div class="w-20 h-1 bg-primary"></div>
+            <p class="text-lg text-gray-300 leading-relaxed">
+              El Gimnàstic de Tarragona és més que un club de futbol. Som la passió encarnada d'una ciutat,
+              la veu d'una comunitat que respira grana cada dia. Des de 1886, hem estat testimonis i protagonistes
+              de moments històrics que han deixat empremta al cor de Tarragona.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+              La nostra missió és simple però poderosa: portar els valors de l'esport, la competència sana i
+              el treball en equip a tots els nostres aficionats. Cada equipació, cada entrenament, cada partit
+              és una oportunitat per demostrar que l'orgull de Tarragona no s'extingeix.
+            </p>
+          </div>
+          <div class="bg-card-dark rounded-2xl p-8 space-y-6">
+            <div class="space-y-3">
+              <h3 class="font-black text-xl uppercase tracking-wider text-primary">La Nostra Visió</h3>
+              <p class="text-gray-300">Ser l'orgull de Tarragona i referència en el futbol espanyol,
+                competint amb excel·lència i professionalisme.</p>
+            </div>
+            <div class="border-t border-white/10 pt-6">
+              <h3 class="font-black text-xl uppercase tracking-wider text-primary mb-3">Els Nostres Valors</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>✓ Passió pel futbol</li>
+                <li>✓ Treball en equip</li>
+                <li>✓ Respecte i fair play</li>
+                <li>✓ Compromís amb la comunitat</li>
+                <li>✓ Excel·lència en tot el que fem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Característiques de la marca -->
+        <div class="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-12 mb-20">
+          <h2 class="text-4xl font-black uppercase tracking-tighter mb-12 text-center">Per Què Escollir-nos</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="space-y-4">
+              <div class="text-5xl font-black text-primary"></div>
+              <h3 class="font-black text-xl uppercase tracking-wider">Autenticitat</h3>
+              <p class="text-gray-300">Tot el que venem està recolzat per la tradició
+                i la passió del Nàstic. Som legítims, sempre.</p>
+            </div>
+            <div class="space-y-4">
+              <div class="text-5xl font-black text-primary"></div>
+              <h3 class="font-black text-xl uppercase tracking-wider">Qualitat</h3>
+              <p class="text-gray-300">Els nostres productes són dissenyats i fabricats
+                amb els més alts estàndards de qualitat.</p>
+            </div>
+            <div class="space-y-4">
+              <div class="text-5xl font-black text-primary"></div>
+              <h3 class="font-black text-xl uppercase tracking-wider">Comunitat</h3>
+              <p class="text-gray-300">Som una família. Cada compra és una forma
+                d'unir-se a la comunitat grana.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Xifres -->
+        <div class="py-12">
+          <h2 class="text-4xl font-black uppercase tracking-tighter mb-12 text-center">Els Nostres Números</h2>
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <p class="text-6xl font-black text-primary mb-2">140</p>
+              <p class="text-gray-300 uppercase tracking-wider font-bold">Anys d'Història</p>
+            </div>
+            <div class="text-center">
+              <p class="text-6xl font-black text-primary mb-2">7.000+</p>
+              <p class="text-gray-300 uppercase tracking-wider font-bold">Socis</p>
+            </div>
+            <div class="text-center">
+              <p class="text-6xl font-black text-primary mb-2">4</p>
+              <p class="text-gray-300 uppercase tracking-wider font-bold">Temporades a 1a</p>
+            </div>
+            <div class="text-center">
+              <p class="text-6xl font-black text-primary mb-2">3</p>
+              <p class="text-gray-300 uppercase tracking-wider font-bold">Copes Catalunya</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto">
+        <div class="bg-primary/20 border border-primary/50 rounded-2xl p-12 text-center space-y-6">
+          <h2 class="text-4xl font-black uppercase tracking-tighter">Uneix-te a la Família Grana</h2>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            Som més que una botiga. Som un moviment. Sigues part de la comunitat del Nàstic.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="coleccion.html"
+              class="bg-primary hover:bg-primary/80 text-white font-black px-10 py-4 uppercase tracking-widest rounded-lg transition-colors">
+              Veure Col·lecció
+            </a>
+            <a href="historia.html"
+              class="border border-white hover:bg-white hover:text-black text-white font-black px-10 py-4 uppercase tracking-widest rounded-lg transition-colors">
+              Coneix la Nostra Història
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 pt-20 pb-10 px-6 md:px-20 mt-20">
+      <div class="max-w-[1440px] mx-auto">
+        <div class="text-center space-y-4">
+          <p class="text-gray-400 text-sm">© 2026 1886 STORE. NO OFICIAL. PRODUCTES INDEPENDENTS.</p>
+          <p class="text-[10px] text-gray-500 mt-1">No afiliat al Gimnàstic de Tarragona SAD.</p>
+          <div class="flex justify-center gap-6">
+            <a href="legal.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Política de Privacitat</a>
+            <a href="legal.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Condicions de Servei</a>
+            <a href="contacto.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Contacte</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

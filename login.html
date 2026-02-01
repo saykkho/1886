@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="dark" lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sessió - Nàstic Store</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+            font-feature-settings: 'liga';
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#94000c",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#121212",
+                        "card-dark": "#1F1F1F",
+                        "grana-accent": "#ce8d92"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+    <div class="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+        <!-- Fondo -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-20"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYniUgiV4Bu_hDIzGmOQYSRUPiNi5hChDwMzkGNBVnCcAMYIgAo-ue4sTnId98I6MPN_ewjwwl3VZJ-Wd7rTLkCszGLEKaMfaNsSUrmWaEOZAcDYexVLqdVX51LWf51BU7kW6G4k0O3tx5MI6MrkCdWjhHlEz5G4CKMGNOTYvVpZO_ZE5xd4AHYE_37JMgVPVNBi8C6gKTNlbCx6mIM2kCy56SBpJcgWc028x9RIPfw-anWkb6rJZ_FPinWKzfMwtrLglrh4mw1vvi");'>
+        </div>
+
+        <div class="absolute top-6 left-6 md:left-20">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+            </a>
+        </div>
+
+        <!-- Card Login -->
+        <div class="w-full max-w-md bg-card-dark border border-white/10 rounded-2xl p-8 relative z-10 shadow-2xl">
+            <div class="text-center mb-8">
+                <h1 id="formTitle" class="text-3xl font-black uppercase tracking-tighter mb-2">Benvingut Soci</h1>
+                <p id="formSubtitle" class="text-gray-400 text-sm">Accedeix al teu compte per gestionar comandes</p>
+            </div>
+
+            <form id="loginForm" class="space-y-6">
+                <!-- Campo Nombre (Solo para registro) -->
+                <div id="nameField" class="hidden">
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2">Nom Complet</label>
+                    <div class="relative">
+                        <input type="text" id="regNombre"
+                            class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
+                            placeholder="El teu nom">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2">Email</label>
+                    <div class="relative">
+                        <input type="email" id="logEmail" required
+                            class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 text-sm focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
+                            placeholder="Email">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2">Contrasenya</label>
+                    <div class="relative">
+                        <input type="password" id="logPass" required
+                            class="w-full bg-background-dark border border-white/10 rounded-lg py-3 px-4 pr-12 text-sm focus:ring-1 focus:ring-primary focus:border-primary transition-colors"
+                            placeholder="••••••••">
+                        <button type="button" id="togglePass"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-lg">visibility</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="errorMsg" class="text-xs text-red-500 text-center hidden">Error!</div>
+
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-primary hover:bg-primary/80 text-white font-black py-4 rounded-lg uppercase tracking-widest transition-all">
+                    Iniciar Sessió
+                </button>
+            </form>
+
+            <div class="mt-6 text-center space-y-4">
+                <button id="toggleMode" class="text-xs text-gray-500 hover:text-white transition-colors">
+                    No tens compte? <span class="text-primary font-bold hover:underline">Registra't</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="mt-8 text-center">
+            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">© 2026 1886 STORE. NO OFICIAL.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('loginForm');
+        const toggleBtn = document.getElementById('toggleMode');
+        const nameField = document.getElementById('nameField');
+        const formTitle = document.getElementById('formTitle');
+        const formSubtitle = document.getElementById('formSubtitle');
+        const submitBtn = document.getElementById('submitBtn');
+        const errorMsg = document.getElementById('errorMsg');
+        const togglePassBtn = document.getElementById('togglePass');
+        const passInput = document.getElementById('logPass');
+
+        // Toggle visibilidad contraseña
+        togglePassBtn.addEventListener('click', () => {
+            const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passInput.setAttribute('type', type);
+            togglePassBtn.querySelector('span').textContent = type === 'password' ? 'visibility' : 'visibility_off';
+        });
+
+        let mode = 'login'; // 'login' o 'register'
+
+        toggleBtn.addEventListener('click', () => {
+            mode = mode === 'login' ? 'register' : 'login';
+
+            if (mode === 'register') {
+                formTitle.textContent = 'Nou Soci';
+                formSubtitle.textContent = 'Crea un compte per a la millor experiència';
+                submitBtn.textContent = 'Registrar-se';
+                nameField.classList.remove('hidden');
+                document.getElementById('regNombre').required = true;
+                toggleBtn.innerHTML = 'Ja tens compte? <span class="text-primary font-bold">Inicia Sessió</span>';
+            } else {
+                formTitle.textContent = 'Benvingut Soci';
+                formSubtitle.textContent = 'Accedeix al teu compte per gestionar comandes';
+                submitBtn.textContent = 'Iniciar Sessió';
+                nameField.classList.add('hidden');
+                document.getElementById('regNombre').required = false;
+                toggleBtn.innerHTML = 'No tens compte? <span class="text-primary font-bold">Registra\'t</span>';
+            }
+            errorMsg.classList.add('hidden');
+        });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorMsg.classList.add('hidden');
+
+            const email = document.getElementById('logEmail').value;
+            const pass = document.getElementById('logPass').value;
+            const nombre = document.getElementById('regNombre').value;
+
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-sm">refresh</span> Processant...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                if (mode === 'register') {
+                    const res = registrarUsuario(email, pass, nombre);
+                    if (res.exito) {
+                        mostrarNotificacion(res.mensaje);
+                        // Auto login tras registro
+                        loguearUsuario(email, pass);
+                        setTimeout(() => window.location.href = 'index.html', 1000);
+                    } else {
+                        errorMsg.textContent = res.mensaje;
+                        errorMsg.classList.remove('hidden');
+                    }
+                } else {
+                    const res = loguearUsuario(email, pass);
+                    if (res.exito) {
+                        mostrarNotificacion('Benvingut de nou!');
+                        setTimeout(() => window.location.href = 'index.html', 1000);
+                    } else {
+                        errorMsg.textContent = res.mensaje;
+                        errorMsg.classList.remove('hidden');
+                    }
+                }
+
+                submitBtn.textContent = mode === 'login' ? 'Iniciar Sessió' : 'Registrar-se';
+                submitBtn.disabled = false;
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

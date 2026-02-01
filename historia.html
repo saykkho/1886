@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Nostra Història - Nàstic Store</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#94000c",
+            "background-light": "#f7f7f7",
+            "background-dark": "#121212",
+            "card-dark": "#1F1F1F",
+            "grana-accent": "#ce8d92"
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+    <!-- Navegación -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 md:px-20 py-4">
+      <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+
+          <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="introduccion.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Sobre Nosaltres</a>
+          <a href="coleccion.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Col·lecció</a>
+          <a href="historia.html"
+            class="text-sm font-bold uppercase tracking-widest text-primary border-b-2 border-primary">La Nostra
+            Història</a>
+          <a href="contacto.html"
+            class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Contacte</a>
+        </nav>
+        <div class="flex items-center gap-6 flex-1 justify-end">
+          <div class="relative max-w-xs w-full hidden md:block">
+            <input
+              class="w-full bg-card-dark border-none rounded-lg py-2 pl-12 pr-4 text-xs font-bold focus:ring-1 focus:ring-primary placeholder-grana-accent/50"
+              placeholder="CERCAR PRODUCTES..." type="text" />
+            <span
+              class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-grana-accent text-sm"></span>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+              <span class="material-symbols-outlined">person</span>
+            </button>
+            <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+              <span class="material-symbols-outlined">shopping_bag</span>
+              <span
+                class="absolute top-0 right-0 size-4 bg-primary text-[10px] flex items-center justify-center rounded-full font-bold">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="relative w-full h-[60vh] @container overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40"></div>
+        <div class="relative h-full flex flex-col justify-center px-6 md:px-20 max-w-[1440px] mx-auto">
+          <div class="max-w-3xl space-y-4">
+            <h1 class="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter">
+              La Nostra <br /> <span class="text-grana-accent">Història</span>
+            </h1>
+            <p class="text-xl text-gray-200">Més de 138 anys de passió, lluita i glòria a Tarragona.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto">
+        <h2 class="text-4xl font-black uppercase tracking-tighter mb-16 text-center">Un Viatge a Través del Temps</h2>
+
+        <div class="space-y-12">
+          <!-- 1886 -->
+          <div class="flex gap-8 items-start">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center font-black text-lg mb-4">
+              </div>
+              <div class="w-1 h-32 bg-gradient-to-b from-primary to-transparent hidden md:block"></div>
+            </div>
+            <div class="bg-card-dark rounded-2xl p-8 flex-1">
+              <h3 class="text-2xl font-black uppercase tracking-wider text-primary mb-2">1886</h3>
+              <h4 class="text-xl font-bold mb-4">La Fundació</h4>
+              <p class="text-gray-300">
+                El 3 d'abril de 1886, neix el Gimnàstic de Tarragona al si de la ciutat.
+                Un grup de joves apasionats pel futbol decideixen crear un club que seria
+                el cor esportiu de Tarragona durant més d'un segle.
+              </p>
+            </div>
+          </div>
+
+          <!-- Siglo XX -->
+          <div class="flex gap-8 items-start">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center font-black text-lg mb-4">
+              </div>
+              <div class="w-1 h-32 bg-gradient-to-b from-primary to-transparent hidden md:block"></div>
+            </div>
+            <div class="bg-card-dark rounded-2xl p-8 flex-1">
+              <h3 class="text-2xl font-black uppercase tracking-wider text-primary mb-2">1900-1950</h3>
+              <h4 class="text-xl font-bold mb-4">Els Primers Passos</h4>
+              <p class="text-gray-300">
+                Durant la primera meitat del segle XX, el Nàstic es consolida com un equip
+                important en el panorama del futbol espanyol. Participem en totes les
+                competicions principals i guanyem el respecte de propis i estranys.
+              </p>
+            </div>
+          </div>
+
+          <!-- Época Dorada -->
+          <div class="flex gap-8 items-start">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center font-black text-lg mb-4">
+              </div>
+              <div class="w-1 h-32 bg-gradient-to-b from-primary to-transparent hidden md:block"></div>
+            </div>
+            <div class="bg-card-dark rounded-2xl p-8 flex-1">
+              <h3 class="text-2xl font-black uppercase tracking-wider text-primary mb-2">1950-1980</h3>
+              <h4 class="text-xl font-bold mb-4">L'Època Daurada</h4>
+              <p class="text-gray-300">
+                Aquest va ser el període més gloriós del Nàstic. Guanyem múltiples títols,
+                jugadors llegendaris van vestir la nostra samarreta i vam competir a nivell
+                nacional i internacional. L'Estadi Municipal es va convertir en una fortalesa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Era Moderna -->
+          <div class="flex gap-8 items-start">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center font-black text-lg mb-4">
+              </div>
+              <div class="w-1 h-32 bg-gradient-to-b from-primary to-transparent hidden md:block"></div>
+            </div>
+            <div class="bg-card-dark rounded-2xl p-8 flex-1">
+              <h3 class="text-2xl font-black uppercase tracking-wider text-primary mb-2">1980-2000</h3>
+              <h4 class="text-xl font-bold mb-4">Transformació i Modernització</h4>
+              <p class="text-gray-300">
+                El Nàstic es reinventa. Noves instal·lacions, nous sistemes de joc,
+                nous valors. El club es modernitza per competir en l'era contemporània
+                del futbol professional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Siglo XXI -->
+          <div class="flex gap-8 items-start">
+            <div class="flex flex-col items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center font-black text-lg mb-4">
+              </div>
+            </div>
+            <div class="bg-card-dark rounded-2xl p-8 flex-1">
+              <h3 class="text-2xl font-black uppercase tracking-wider text-primary mb-2">2000 - Avui</h3>
+              <h4 class="text-xl font-bold mb-4">El Nàstic del Segle XXI</h4>
+              <p class="text-gray-300">
+                Avui, el Nàstic és més fort que mai. Amb una comunitat d'aficionats
+                apasionats, una botiga d'aficionats moderna, i un compromís inquebrantable
+                amb l'excel·lència. Som l'orgull de Tarragona. Som el Nàstic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Momentos Memorables -->
+      <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto bg-card-dark/30 rounded-2xl my-20">
+        <h2 class="text-4xl font-black uppercase tracking-tighter mb-16 text-center">Moments Que No Oblidaré</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-primary">Títols Guanyats</h3>
+            <p class="text-gray-300">Múltiples campionats regionals, estatals i nacionals que certifiquen
+              la nostra excel·lència al camp.</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-primary">Grans Jugadors</h3>
+            <p class="text-gray-300">Llegendes del futbol han engrandit el Nàstic amb el seu talent i dedicació.</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-primary">Fites Històriques</h3>
+            <p class="text-gray-300">Des de la nostra fundació el 1886 fins al present, cada capítol conta una història.
+            </p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-xl font-bold text-primary">Comunitat</h3>
+            <p class="text-gray-300">La afició del Nàstic és coneguda per la seva passió, lleialtat i amor
+              incondicional.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto">
+        <div
+          class="bg-gradient-to-r from-primary/20 to-transparent border border-primary/50 rounded-2xl p-12 space-y-6">
+          <h2 class="text-4xl font-black uppercase tracking-tighter">Sigues Part del Futur</h2>
+          <p class="text-xl text-gray-300 max-w-2xl">
+            La història del Nàstic continua. Cada dia, cada partit, cada moment és una nova pàgina en la nostra saga.
+            Uneix-te a nosaltres en aquest viatge inolvidable.
+          </p>
+          <a href="coleccion.html"
+            class="inline-block bg-primary hover:bg-primary/80 text-white font-black px-10 py-4 uppercase tracking-widest rounded-lg transition-colors">
+            Compra Ara
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 pt-20 pb-10 px-6 md:px-20 mt-20">
+      <div class="max-w-[1440px] mx-auto">
+        <div class="text-center space-y-4">
+          <p class="text-gray-400 text-sm">© 2026 1886 STORE. NO OFICIAL. PRODUCTES INDEPENDENTS.</p>
+          <p class="text-[10px] text-gray-500 mt-1">No afiliat al Gimnàstic de Tarragona SAD.</p>
+          <div class="flex justify-center gap-6">
+            <a href="legal.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Política de Privacitat</a>
+            <a href="legal.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Termes de Servei</a>
+            <a href="contacto.html" class="text-xs text-gray-400 hover:text-primary transition-colors">Contacte</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

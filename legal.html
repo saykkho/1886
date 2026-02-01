@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="dark" lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informació Legal - 1886 Store</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#94000c",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#121212",
+                        "card-dark": "#1F1F1F",
+                        "grana-accent": "#ce8d92"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                    <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html"
+                        class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Inici</a>
+                    <a href="coleccion.html"
+                        class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Col·lecció</a>
+                    <a href="contacto.html"
+                        class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">Contacte</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1 py-20 px-6 md:px-20 max-w-4xl mx-auto space-y-20">
+
+            <!-- Política de Privacidad -->
+            <section id="privacitat" class="space-y-6 scroll-mt-24">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-primary">Política de Privacitat</h2>
+                <div class="prose prose-invert max-w-none text-gray-300">
+                    <p>La teva privacitat és important per a nosaltres. Aquesta política explica com recopilem,
+                        utilitzem i protegim les teves dades personals.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Només recopilem la informació necessària per processar la teva comanda.</li>
+                        <li>No compartim les teves dades amb tercers sense el teu consentiment explícit.</li>
+                        <li>Pots sol·licitar l'eliminació de les teves dades en qualsevol moment contactant amb
+                            nosaltres.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Términos de Servicio -->
+            <section id="termes" class="space-y-6 scroll-mt-24">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-primary">Termes de Servei</h2>
+                <div class="prose prose-invert max-w-none text-gray-300">
+                    <p>En utilitzar aquest lloc web, acceptes complir amb els següents termes i condicions:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Aquesta és una botiga <strong>NO OFICIAL</strong> creada per fans. No estem afiliats al
+                            club.</li>
+                        <li>Tots els productes són dissenys independents o inspiracions.</li>
+                        <li>Ens reservem el dret de cancel·lar qualsevol comanda per qualsevol motiu.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Envíos -->
+            <section id="enviaments" class="space-y-6 scroll-mt-24">
+                <h2 class="text-3xl font-black uppercase tracking-tighter text-primary">Enviaments i Devolucions</h2>
+                <div class="prose prose-invert max-w-none text-gray-300">
+                    <h3 class="font-bold text-white mb-2">Temps d'Enviament</h3>
+                    <p class="mb-4">Processam les comandes en 24-48 hores. L'enviament estàndard triga entre 3 i 5 dies
+                        laborables a la Península.</p>
+
+                    <h3 class="font-bold text-white mb-2">Devolucions</h3>
+                    <p>Acceptem devolucions durant els primers 30 dies després de la recepció del producte, sempre que
+                        aquest estigui en perfectes condicions i amb l'embalatge original.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-background-dark border-t border-white/10 pt-10 pb-10 px-6 md:px-20 mt-20 text-center">
+            <p class="text-gray-400 text-sm">© 2026 1886 STORE. NO OFICIAL.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

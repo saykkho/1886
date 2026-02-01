@@ -1,0 +1,48 @@
+{
+  "nombre": "Nàstic Store",
+  "version": "1.0.0",
+  "descripcion": "Tienda oficial del Gimnàstic de Tarragona",
+  "autor": "Nàstic Store Team",
+  "licencia": "Copyright © 2024-2026 Club Gimnàstic de Tarragona",
+  "sitio": "https://www.nasticdetarragona.com",
+  "contacto": {
+    "email": "tienda@nasticdetarragona.com",
+    "telefono": "+34 977 22 00 00",
+    "direccion": "Tarragona, España"
+  },
+  "redes_sociales": {
+    "instagram": "@nasticdetarragona",
+    "facebook": "Gimnàstic de Tarragona",
+    "twitter": "@nasticdetarragona"
+  },
+  "historial_cambios": {
+    "1.0.0": {
+      "fecha": "2026-01-18",
+      "cambios": [
+        "Lanzamiento inicial",
+        "Sistema de carrito de compras",
+        "Buscador de productos",
+        "Tema oscuro/claro",
+        "Persistencia de datos en localStorage",
+        "6 productos iniciales",
+        "Diseño responsive"
+      ]
+    }
+  },
+  "caracteristicas": {
+    "ecommerce": true,
+    "carrito": true,
+    "busqueda": true,
+    "temaOscuro": true,
+    "responsive": true,
+    "offline": true
+  },
+  "tecnologias": [
+    "HTML5",
+    "CSS3",
+    "JavaScript (Vanilla)",
+    "Tailwind CSS",
+    "Google Fonts",
+    "Material Icons"
+  ]
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="dark" lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalitzar Compra - 1886 Store</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#94000c",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#121212",
+                        "card-dark": "#1F1F1F",
+                        "grana-accent": "#ce8d92"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header Simplificado -->
+        <header class="border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="max-w-[1440px] mx-auto flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                    <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+                </a>
+                <div class="flex items-center gap-2 text-sm text-gray-400">
+                    <span class="text-primary font-bold">1. Carretó</span>
+                    <span class="material-symbols-outlined text-xs">chevron_right</span>
+                    <span class="text-white font-bold">2. Revisió</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 py-12 px-6 md:px-20 max-w-4xl mx-auto w-full">
+            <div class="space-y-8">
+                <!-- Header del Checkout -->
+                <div class="text-center">
+                    <h1 class="text-3xl font-black uppercase tracking-tighter mb-4">Revisió de la Comanda</h1>
+                    <p class="text-gray-400">Revisa els productes abans de finalitzar la compra a Wallapop.</p>
+                </div>
+
+                <!-- Resumen (Centrado) -->
+                <div class="bg-card-dark rounded-2xl p-8">
+                    <h3 class="text-xl font-black uppercase tracking-wider mb-6">Productes</h3>
+                    <div id="checkout-items" class="space-y-4 mb-6 max-h-[500px] overflow-y-auto custom-scrollbar">
+                        <!-- Items se cargarán vía JS -->
+                        <p class="text-gray-400 text-sm">Carregant productes...</p>
+                    </div>
+
+                    <div class="border-t border-white/10 pt-6 space-y-2">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">€0.00</span>
+                        </div>
+                        <div class="flex justify-between text-xl font-black pt-4 border-t border-white/10 mt-4">
+                            <span>Total</span>
+                            <span id="checkout-total" class="text-primary">€0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-white/10">
+                        <a href="https://es.wallapop.com/" target="_blank"
+                            class="block w-full bg-primary hover:bg-primary/80 text-white text-center font-black py-4 rounded-lg uppercase tracking-widest transition-all shadow-lg shadow-primary/20">
+                            Comprar a Wallapop
+                        </a>
+                        <p class="text-center text-xs text-gray-500 mt-4">
+                            Seràs redirigit a Wallapop per completar la compra de forma segura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-background-dark border-t border-white/10 py-8 text-center text-xs text-gray-500">
+            <p>© 2026 1886 STORE. NO OFICIAL. PRODUCTES INDEPENDENTS.</p>
+        </footer>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Lógica específica de checkout
+        document.addEventListener('DOMContentLoaded', () => {
+            cargarCheckout();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gimnàstic de Tarragona Store Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#94000c",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#121212",
+                        "card-dark": "#1F1F1F",
+                        "grana-accent": "#ce8d92"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Epilogue', sans-serif;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display transition-colors duration-300">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+
+                    <h2 class="text-xl font-black uppercase tracking-tighter">1886.</h2>
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="introduccion.html">Sobre Nosaltres</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="coleccion.html">Col·lecció</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="historia.html">La Nostra Història</a>
+                    <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="contacto.html">Contacte</a>
+                </nav>
+                <div class="flex items-center gap-6 flex-1 justify-end">
+                    <div class="relative max-w-xs w-full hidden md:block">
+                        <input
+                            class="w-full bg-card-dark border-none rounded-lg py-2 pl-10 pr-4 text-xs font-bold focus:ring-1 focus:ring-primary placeholder-grana-accent/50"
+                            placeholder="CERCAR PRODUCTES..." type="text" />
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-grana-accent text-sm">search</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+                            <span class="material-symbols-outlined">person</span>
+                        </button>
+                        <button class="relative hover:text-primary transition-colors p-2 rounded-full hover:bg-white/5">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                            <span
+                                class="absolute top-0 right-0 size-4 bg-primary text-[10px] flex items-center justify-center rounded-full font-bold">2</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative w-full h-[85vh] @container">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    data-alt="Action shot of football player in red kit celebrating"
+                    style='background-image: linear-gradient(to right, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.2) 50%, rgba(18, 18, 18, 0) 100%), url("images/image.png");'>
+                </div>
+                <div class="relative h-full flex flex-col justify-center px-6 md:px-20 max-Fw-[1440px] mx-auto">
+                    <div class="max-w-2xl space-y-6">
+                        <span
+                            class="inline-block bg-primary text-xs font-black uppercase tracking-[0.2em] px-4 py-1">Col·lecció
+                            25/26</span>
+                        <h1 class="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter">
+                            L'ORGULL <br /> <span class="text-primary">DE TARRAGONA</span>
+                        </h1>
+                        <p class="text-lg text-gray-300 max-w-md">Viu la passió grana amb les nostres samarretes per a
+                            aficionats, fetes per animar, gaudir i portar el Nàstic sempre amb tu.</p>
+                        <div class="flex gap-4">
+                            <button
+                                class="bg-primary hover:bg-primary/80 text-white font-black px-10 py-4 uppercase tracking-widest text-sm transition-all rounded-lg">Compra
+                                Ara</button>
+                            <button
+                                class="border border-white hover:bg-white hover:text-black text-white font-black px-10 py-4 uppercase tracking-widest text-sm transition-all rounded-lg">Veure
+                                Catàleg</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- New Arrivals Carousel -->
+            <section class="py-20 px-6 md:px-20 max-w-[1440px] mx-auto">
+                <div class="flex justify-between items-end mb-10">
+                    <div>
+                        <h2 class="text-4xl font-black uppercase tracking-tighter italic">Novetats</h2>
+                        <div class="w-20 h-1 bg-primary mt-2"></div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="size-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary transition-colors">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="size-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary transition-colors">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex overflow-x-auto gap-6 custom-scrollbar pb-10">
+                    <!-- Product Card 1 -->
+                    <div class="min-w-[320px] group">
+                        <div class="relative aspect-[3/4] bg-card-dark rounded-xl overflow-hidden mb-4">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Camiseta Local 24/25"
+                                style='background-image: url("images/estadio-front.jpeg");'></div>
+                            <div class="absolute top-4 left-4">
+                                <span
+                                    class="bg-primary text-[10px] font-black uppercase tracking-widest px-2 py-1">Nou</span>
+                            </div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80 to-transparent">
+                                <button
+                                    class="w-full bg-white text-black font-black py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-colors">Afegir</button>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-lg">Samarreta Local 24/25</h3>
+                        <p class="text-grana-accent font-bold">€79.99</p>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="min-w-[320px] group">
+                        <div class="relative aspect-[3/4] bg-card-dark rounded-xl overflow-hidden mb-4">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Professional training jacket in deep red"
+                                style='background-image: url("images/camiseta-doble.jpeg");'></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80 to-transparent">
+                                <button
+                                    class="w-full bg-white text-black font-black py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-colors">Afegir</button>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-lg">Jaqueta Entrenament</h3>
+                        <p class="text-grana-accent font-bold">€54.99</p>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="min-w-[320px] group">
+                        <div class="relative aspect-[3/4] bg-card-dark rounded-xl overflow-hidden mb-4">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Official white away kit 2024/25" style='background-image: url("");'></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80 to-transparent">
+                                <button
+                                    class="w-full bg-white text-black font-black py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-colors">Afegir</button>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-lg">Samarreta Suplent 24/25</h3>
+                        <p class="text-grana-accent font-bold">€79.99</p>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="min-w-[320px] group">
+                        <div class="relative aspect-[3/4] bg-card-dark rounded-xl overflow-hidden mb-4">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                data-alt="Official club scarf with crest" style='background-image: url("");'></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80 to-transparent">
+                                <button
+                                    class="w-full bg-white text-black font-black py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-colors">Afegir</button>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-lg">Bufanda Estadi "Grana"</h3>
+                        <p class="text-grana-accent font-bold">€19.99</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Story Banner -->
+            <section class="relative py-32 px-6 overflow-hidden">
+                <div class="absolute inset-0 bg-primary opacity-90"></div>
+                <div class="absolute inset-0 mix-blend-multiply opacity-30 bg-cover bg-fixed"
+                    data-alt="Crowd of fans cheering at the stadium"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYniUgiV4Bu_hDIzGmOQYSRUPiNi5hChDwMzkGNBVnCcAMYIgAo-ue4sTnId98I6MPN_ewjwwl3VZJ-Wd7rTLkCszGLEKaMfaNsSUrmWaEOZAcDYexVLqdVX51LWf51BU7kW6G4k0O3tx5MI6MrkCdWjhHlEz5G4CKMGNOTYvVpZO_ZE5xd4AHYE_37JMgVPVNBi8C6gKTNlbCx6mIM2kCy56SBpJcgWc028x9RIPfw-anWkb6rJZ_FPinWKzfMwtrLglrh4mw1vvi");'>
+                </div>
+                <div class="relative max-w-4xl mx-auto text-center space-y-8">
+                    <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter">Més que un club, una
+                        ciutat.</h2>
+                    <p class="text-xl font-medium max-w-2xl mx-auto">Des de 1886, el Gimnàstic de Tarragona ha estat el
+                        batec del cor de la ciutat. Vesteix la samarreta amb orgull i uneix-te al llegat.</p>
+                    <button
+                        class="bg-white text-primary font-black px-12 py-5 uppercase tracking-widest text-sm rounded-lg hover:bg-black hover:text-white transition-all">La
+                        Nostra Història</button>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-background-dark border-t border-white/10 pt-20 pb-10 px-6 md:px-20">
+            <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="text-primary">
+                            <span class="material-symbols-outlined text-4xl">shield</span>
+                        </div>
+                        <h2 class="text-xl font-black uppercase tracking-tighter">Nàstic Store</h2>
+                    </div>
+                    <p class="text-gray-400 text-sm">Botiga independent per a aficionats del Nàstic. Roba casual
+                        d'inspiració grana (No Oficial).</p>
+                    <div class="flex gap-4">
+                        <a class="size-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary transition-colors"
+                            href="legal.html">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                        </a>
+                        <a class="size-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary transition-colors"
+                            href="legal.html">
+                            <span class="material-symbols-outlined text-sm">videocam</span>
+                        </a>
+                        <a class="size-10 flex items-center justify-center border border-white/10 rounded-full hover:bg-primary transition-colors"
+                            href="legal.html">
+                            <span class="material-symbols-outlined text-sm">groups</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest text-sm mb-6">Compra</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Seguiment de Comandes</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Guia de Talles</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Devolucions i
+                                Intercanvis</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Localitzador de
+                                Botigues</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black uppercase tracking-widest text-sm mb-6">Informació</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Història del Club</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Política de Privacitat</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Termes de Servei</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="legal.html">Contacte</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-black uppercase tracking-widest text-sm mb-6">Uneix-te a la Família Grana</h4>
+                    <p class="text-sm text-gray-400">Subscriu-te per a ofertes exclusives i notificacions de
+                        llançaments.</p>
+                    <div class="flex">
+                        <input
+                            class="bg-card-dark border-none flex-1 py-3 px-4 text-xs font-bold focus:ring-1 focus:ring-primary rounded-l-lg"
+                            placeholder="EL TEU EMAIL" type="email" />
+                        <button class="bg-primary px-6 rounded-r-lg hover:bg-primary/80 transition-colors">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-[1440px] mx-auto border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">© 2026 1886 STORE. NO OFICIAL.
+                    PRODUCTES INDEPENDENTS.</p>
+                <div class="flex flex-col items-center md:items-start">
+                    <p class="text-[10px] text-gray-600 mt-1">No afiliat al Gimnàstic de Tarragona SAD.</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <span
+                        class="material-symbols-outlined text-gray-500 hover:text-white transition-colors cursor-pointer">payments</span>
+                    <span
+                        class="material-symbols-outlined text-gray-500 hover:text-white transition-colors cursor-pointer">credit_card</span>
+                    <span
+                        class="material-symbols-outlined text-gray-500 hover:text-white transition-colors cursor-pointer">account_balance_wallet</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
