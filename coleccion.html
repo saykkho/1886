@@ -49,6 +49,25 @@
       -webkit-font-smoothing: antialiased;
       font-feature-settings: 'liga';
     }
+
+    /* Menú Mòbil Ampliat */
+    #mobileMenu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #000000;
+      z-index: 9999;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    #mobileMenu.active {
+      transform: translateX(0);
+    }
   </style>
 </head>
 
@@ -79,33 +98,6 @@
           <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
 
-        <!-- Menú Mòbil Drawer -->
-        <div id="mobileMenu"
-          class="fixed inset-0 z-[999] bg-[#121212] translate-x-full transition-transform duration-300 lg:hidden">
-          <div class="flex flex-col h-full p-8">
-            <div class="flex justify-between items-center mb-12">
-              <h2 class="text-2xl font-black uppercase tracking-tighter">1886.</h2>
-              <button id="closeMobileMenu" class="text-white">
-                <span class="material-symbols-outlined text-3xl">close</span>
-              </button>
-            </div>
-            <nav class="flex flex-col gap-8">
-              <a href="introduccion.html"
-                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Sobre
-                Nosaltres</a>
-              <a href="coleccion.html"
-                class="text-2xl font-black uppercase tracking-widest text-primary hover:text-primary transition-colors">Col·lecció</a>
-              <a href="historia.html"
-                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">La Nostra
-                Història</a>
-              <a href="contacto.html"
-                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Contacte</a>
-              <a href="login.html"
-                class="text-2xl font-black uppercase tracking-widest text-primary pt-8 border-t border-white/10">Inicia
-                Sessió</a>
-            </nav>
-          </div>
-        </div>
         <div class="flex items-center gap-6 flex-1 justify-end">
           <div class="relative max-w-xs w-full hidden md:block">
             <input
@@ -195,6 +187,31 @@
     </footer>
   </div>
 
+  <!-- Menú Mòbil Drawer -->
+  <div id="mobileMenu" class="lg:hidden">
+    <div class="flex flex-col h-full p-8 text-white">
+      <div class="flex justify-between items-center mb-12">
+        <h2 class="text-2xl font-black uppercase tracking-tighter">1886.</h2>
+        <button id="closeMobileMenu" class="text-white p-2">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-8">
+        <a href="introduccion.html"
+          class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Sobre Nosaltres</a>
+        <a href="coleccion.html"
+          class="text-2xl font-black uppercase tracking-widest text-primary hover:text-primary transition-colors">Col·lecció</a>
+        <a href="historia.html"
+          class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">La Nostra
+          Història</a>
+        <a href="contacto.html"
+          class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Contacte</a>
+        <a href="login.html"
+          class="text-2xl font-black uppercase tracking-widest text-primary pt-8 border-t border-white/10">Inicia
+          Sessió</a>
+      </nav>
+    </div>
+  </div>
   <script src="script.js"></script>
   <script>
     // Sobreescribir la función renderizarProductos para el grid de coleccion

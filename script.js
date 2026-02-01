@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileMenuToggle && mobileMenu) {
     mobileMenuToggle.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('active');
     });
   }
 
   if (closeMobileMenu && mobileMenu) {
     closeMobileMenu.addEventListener('click', () => {
-      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('active');
     });
   }
 
