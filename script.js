@@ -6,6 +6,23 @@ let usuario = null;
 
 // Inicializar la aplicación
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Menu Logic
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const closeMobileMenu = document.getElementById('closeMobileMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+    });
+  }
+
+  if (closeMobileMenu && mobileMenu) {
+    closeMobileMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+    });
+  }
+
   cargarCarritoDelLocalStorage();
   cargarUsuarioDelLocalStorage();
   actualizarContadorCarrito();
@@ -406,6 +423,19 @@ function mostrarCuenta() {
 function toggleTema() {
   document.documentElement.classList.toggle('dark');
 }
+
+// Función para desplazar carruseles
+window.scrollCarousel = function (carouselId, direction) {
+  const container = document.getElementById(carouselId);
+  if (!container) return;
+
+  // En móvil el scroll suele ser por elementos individuales o píxeles fijos
+  const scrollAmount = container.offsetWidth * 0.8;
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+};
 
 // Scroll suave para navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

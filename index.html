@@ -92,6 +92,39 @@
                     <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
                         href="contacto.html">Contacte</a>
                 </nav>
+
+                <!-- Menú Mòbil Toggle -->
+                <button id="mobileMenuToggle" class="lg:hidden text-white p-2">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+
+                <!-- Menú Mòbil Drawer -->
+                <div id="mobileMenu"
+                    class="fixed inset-0 z-[999] bg-[#121212] translate-x-full transition-transform duration-300 lg:hidden">
+                    <div class="flex flex-col h-full p-8">
+                        <div class="flex justify-between items-center mb-12">
+                            <h2 class="text-2xl font-black uppercase tracking-tighter">1886.</h2>
+                            <button id="closeMobileMenu" class="text-white">
+                                <span class="material-symbols-outlined text-3xl">close</span>
+                            </button>
+                        </div>
+                        <nav class="flex flex-col gap-8">
+                            <a href="introduccion.html"
+                                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Sobre
+                                Nosaltres</a>
+                            <a href="coleccion.html"
+                                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Col·lecció</a>
+                            <a href="historia.html"
+                                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">La
+                                Nostra Història</a>
+                            <a href="contacto.html"
+                                class="text-2xl font-black uppercase tracking-widest hover:text-primary transition-colors">Contacte</a>
+                            <a href="login.html"
+                                class="text-2xl font-black uppercase tracking-widest text-primary pt-8 border-t border-white/10">Inicia
+                                Sessió</a>
+                        </nav>
+                    </div>
+                </div>
                 <div class="flex items-center gap-6 flex-1 justify-end">
                     <div class="relative max-w-xs w-full hidden md:block">
                         <input
