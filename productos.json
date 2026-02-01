@@ -29,10 +29,10 @@
       "categoria": "samarretes",
       "precio": 15.00,
       "precioOriginal": 20.00,
-      "imagen": "images/nou_estadi_front.jpg",
+      "imagen": "images/nou_estadi_back.jpg",
       "imagenes": [
-        "images/nou_estadi_front.jpg",
-        "images/nou_estadi_back.jpg"
+        "images/nou_estadi_back.jpg",
+        "images/nou_estadi_front.jpg"
       ],
       "descripcion": "Samarreta edició especial Costa Daurada - Nou Estadi",
       "tallas": [
