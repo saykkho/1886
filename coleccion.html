@@ -228,13 +228,13 @@
       if (grid) {
         // Para colección, mostrar en grid
         grid.innerHTML = productos.map(producto => `
-          <a href="producto-detalle.html?id=${producto.id}" class="bg-card-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/20 transition-all group cursor-pointer">
+          <div onclick="mostrarCountdown(event)" class="bg-card-dark rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/20 transition-all group cursor-pointer">
             <div class="relative aspect-[3/4] bg-background-dark overflow-hidden">
               <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style='background-image: url("${producto.imagen}");'></div>
               ${producto.nuevo ? '<div class="absolute top-4 left-4"><span class="bg-primary text-[10px] font-black uppercase px-2 py-1">Nou</span></div>' : ''}
               <div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80">
-                <span class="w-full block bg-white text-black font-black py-3 uppercase text-xs tracking-widest text-center hover:bg-primary hover:text-white transition-colors">
-                  Veure Detalls
+                <span class="w-full block bg-white text-black font-black py-3 uppercase text-xs tracking-widest text-center">
+                  Pròximament
                 </span>
               </div>
             </div>
@@ -252,7 +252,7 @@
               </div>
               <p class="text-xs text-gray-500">${producto.stock} en estoc</p>
             </div>
-          </a>
+          </div>
         `).join('');
       } else if (originalRenderizar) {
         originalRenderizar(productos);

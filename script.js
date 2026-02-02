@@ -189,14 +189,14 @@ function renderizarProductos(productos) {
   if (!contenedor) return;
 
   contenedor.innerHTML = productos.map(producto => `
-    <a href="producto-detalle.html?id=${producto.id}" class="min-w-[320px] group cursor-pointer">
+    <div onclick="mostrarCountdown(event)" class="min-w-[320px] group cursor-pointer">
       <div class="relative aspect-[3/4] bg-card-dark rounded-xl overflow-hidden mb-4">
         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("${producto.imagen}");'></div>
         ${producto.nuevo ? '<div class="absolute top-4 left-4"><span class="bg-primary text-[10px] font-black uppercase tracking-widest px-2 py-1">Nou</span></div>' : ''}
         <div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-gradient-to-t from-black/80 to-transparent">
           ${producto.textoPrecio
       ? '<span class="w-full block text-center text-white font-bold py-3 uppercase text-xs tracking-widest">Pròximament</span>'
-      : `<button class="w-full bg-white text-black font-black py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-colors" onclick="agregarAlCarrito(event, ${producto.id})">Afegir</button>`
+      : `<button class="w-full bg-white text-black font-black py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-colors">Veure</button>`
     }
         </div>
       </div>
@@ -208,8 +208,82 @@ function renderizarProductos(productos) {
              ${producto.precioOriginal ? `<p class="text-gray-500 text-sm line-through">€${producto.precioOriginal.toFixed(2)}</p>` : ''}`
     }
       </div>
-    </a>
+    </div>
   `).join('');
+}
+
+// Función de Cuenta Atrás
+function mostrarCountdown(event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  // Eliminar cualquier overlay previo
+  const existing = document.querySelector('.countdown-overlay');
+  if (existing) existing.remove();
+
+  const overlay = document.createElement('div');
+  overlay.className = 'countdown-overlay';
+
+  // Fecha objetivo: hoy + 7 días
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 7);
+
+  overlay.innerHTML = `
+    <div class="countdown-card">
+      <span class="material-symbols-outlined text-primary text-5xl mb-4">lock_clock</span>
+      <h2 class="text-2xl font-black uppercase tracking-tighter text-white">Pròxim Llançament</h2>
+      <p class="text-gray-400 text-sm mt-2">Aquest producte estarà disponible molt aviat. Estigues atent!</p>
+      
+      <div class="countdown-timer" id="timer">
+        <div class="countdown-unit"><span>06</span><span class="countdown-label">d</span></div>
+        <div class="countdown-unit"><span>23</span><span class="countdown-label">h</span></div>
+        <div class="countdown-unit"><span>59</span><span class="countdown-label">m</span></div>
+        <div class="countdown-unit"><span>59</span><span class="countdown-label">s</span></div>
+      </div>
+
+      <button onclick="this.closest('.countdown-overlay').remove()" class="mt-4 text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors">Tancar</button>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  // Lógica del timer real
+  const updateTimer = () => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const timerEl = document.getElementById('timer');
+    if (timerEl) {
+      timerEl.innerHTML = `
+        <div class="countdown-unit"><span>${String(days).padStart(2, '0')}</span><span class="countdown-label">d</span></div>
+        <div class="countdown-unit"><span>${String(hours).padStart(2, '0')}</span><span class="countdown-label">h</span></div>
+        <div class="countdown-unit"><span>${String(minutes).padStart(2, '0')}</span><span class="countdown-label">m</span></div>
+        <div class="countdown-unit"><span>${String(seconds).padStart(2, '0')}</span><span class="countdown-label">s</span></div>
+      `;
+    }
+
+    if (distance < 0) {
+      clearInterval(interval);
+      if (timerEl) timerEl.innerHTML = "DISPONIBLE!";
+    }
+  };
+
+  updateTimer();
+  const interval = setInterval(updateTimer, 1000);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      clearInterval(interval);
+      overlay.remove();
+    }
+  });
 }
 
 // Filtrar productos por término de búsqueda
