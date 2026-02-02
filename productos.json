@@ -4,8 +4,8 @@
       "id": 1,
       "nombre": "BASELGA SHIRT",
       "categoria": "samarretes",
-      "precio": 15.00,
-      "precioOriginal": 20.00,
+      "precio": 20.00,
+      "precioOriginal": 25.00,
       "imagen": "images/baselga_front.jpg",
       "imagenes": [
         "images/baselga_front.jpg",
@@ -27,8 +27,8 @@
       "id": 2,
       "nombre": "Nou Estadi",
       "categoria": "samarretes",
-      "precio": 15.00,
-      "precioOriginal": 20.00,
+      "precio": 20.00,
+      "precioOriginal": 25.00,
       "imagen": "images/nou_estadi_back.jpg",
       "imagenes": [
         "images/nou_estadi_back.jpg",
