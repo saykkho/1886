@@ -117,9 +117,9 @@
 
                 <div id="errorMsg" class="text-xs text-red-500 text-center hidden">Error!</div>
 
-                <button type="submit" id="submitBtn"
-                    class="w-full bg-primary hover:bg-primary/80 text-white font-black py-4 rounded-lg uppercase tracking-widest transition-all">
-                    Iniciar Sessió
+                <button type="submit" id="submitBtn" disabled
+                    class="w-full bg-primary/50 text-white/50 font-black py-4 rounded-lg uppercase tracking-widest transition-all cursor-not-allowed">
+                    No disponible todavía
                 </button>
             </form>
 
@@ -162,14 +162,14 @@
             if (mode === 'register') {
                 formTitle.textContent = 'Nou Soci';
                 formSubtitle.textContent = 'Crea un compte per a la millor experiència';
-                submitBtn.textContent = 'Registrar-se';
+
                 nameField.classList.remove('hidden');
                 document.getElementById('regNombre').required = true;
                 toggleBtn.innerHTML = 'Ja tens compte? <span class="text-primary font-bold">Inicia Sessió</span>';
             } else {
                 formTitle.textContent = 'Benvingut Soci';
                 formSubtitle.textContent = 'Accedeix al teu compte per gestionar comandes';
-                submitBtn.textContent = 'Iniciar Sessió';
+
                 nameField.classList.add('hidden');
                 document.getElementById('regNombre').required = false;
                 toggleBtn.innerHTML = 'No tens compte? <span class="text-primary font-bold">Registra\'t</span>';
@@ -177,43 +177,9 @@
             errorMsg.classList.add('hidden');
         });
 
-        form.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            errorMsg.classList.add('hidden');
-
-            const email = document.getElementById('logEmail').value;
-            const pass = document.getElementById('logPass').value;
-            const nombre = document.getElementById('regNombre').value;
-
-            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-sm">refresh</span> Processant...';
-            submitBtn.disabled = true;
-
-            setTimeout(() => {
-                if (mode === 'register') {
-                    const res = registrarUsuario(email, pass, nombre);
-                    if (res.exito) {
-                        mostrarNotificacion(res.mensaje);
-                        // Auto login tras registro
-                        loguearUsuario(email, pass);
-                        setTimeout(() => window.location.href = 'index.html', 1000);
-                    } else {
-                        errorMsg.textContent = res.mensaje;
-                        errorMsg.classList.remove('hidden');
-                    }
-                } else {
-                    const res = loguearUsuario(email, pass);
-                    if (res.exito) {
-                        mostrarNotificacion('Benvingut de nou!');
-                        setTimeout(() => window.location.href = 'index.html', 1000);
-                    } else {
-                        errorMsg.textContent = res.mensaje;
-                        errorMsg.classList.remove('hidden');
-                    }
-                }
-
-                submitBtn.textContent = mode === 'login' ? 'Iniciar Sessió' : 'Registrar-se';
-                submitBtn.disabled = false;
-            }, 1000);
+            mostrarNotificacion('Aquesta funció encara no està activa. Estem treballant en ella!');
         });
     </script>
 </body>

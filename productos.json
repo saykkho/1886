@@ -32,7 +32,8 @@
       "imagen": "images/nou_estadi_back.jpg",
       "imagenes": [
         "images/nou_estadi_back.jpg",
-        "images/nou_estadi_front.jpg"
+        "images/nou_estadi_front.jpg",
+        "images/nou_estadi_white_back.png"
       ],
       "descripcion": "Samarreta edició especial Costa Daurada - Nou Estadi",
       "tallas": [
