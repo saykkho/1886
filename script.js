@@ -226,9 +226,8 @@ function mostrarCountdown(event) {
   const overlay = document.createElement('div');
   overlay.className = 'countdown-overlay';
 
-  // Fecha objetivo: hoy + 7 días
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 7);
+  // Fecha objetivo global: 12 de febrero de 2026 a las 19:15
+  const targetDate = new Date('2026-02-12T19:15:00').getTime();
 
   overlay.innerHTML = `
     <div class="countdown-card">
